@@ -1,0 +1,19 @@
+var placAndOrder = function(orderNumber) {
+	console.log("customer order:", orderNumber);
+	cookAndDeliverFood(function () {
+		console.log("Placed order", orderNumber);
+	});
+}
+
+//callback gets called fater 5000 ms
+function cookAndDeliverFood(callback){
+	setTimeout(callback, 5000);
+}
+
+//simulate web requests
+placeAndOrder();
+placeAndOrder();
+placeAndOrder();
+placeAndOrder();
+placeAndOrder();
+placeAndOrder();
